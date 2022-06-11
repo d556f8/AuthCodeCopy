@@ -8,6 +8,7 @@
 - Windows  
 1. AuthCodeCopy 배치파일을 실행한다.
 2. Powershell 또는 명령 프롬프트 창이 켜지는데, 종료되면 클립보드에 저장이 완료되었다.
+
 - Linux
 1. AuthCodeCopy 쉘파일을 실행한다.
 2. 명령이 종료가 되면 클립보드에 저장이 완료되었다.
