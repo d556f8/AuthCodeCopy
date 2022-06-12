@@ -9,10 +9,10 @@ emailSender
 """
 
 # Waiting for mail (Analog type)
-# fix when mail came on refresh mailbox and load new mail
+## fix when mail came on refresh mailbox and load new mail
 sleep(3)
 
-# we must find Security Solutions
+## we must find Security Solutions
 user = ""
 password = ""
 
@@ -29,6 +29,7 @@ except:
 imap.select("INBOX")
 
 # Load to Sender Settings
+## set email
 status, messages = imap.uid("search", None, '(FROM "email@email.com")')
 messages = messages[0].split()
 
@@ -43,7 +44,7 @@ body = email_message.get_payload(decode=True).decode()
 # test code
 print(body) 
 
-# Search Pattern 
+# Search Pattern (Support only YJP Authentication)
 # it really slow we gonna find new way
 re_pattern = re.compile(r">\d\d\d\d\d\d<")
 result = re.findall(re_pattern, body)
