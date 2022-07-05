@@ -13,8 +13,8 @@ emailSender
 sleep(3)
 
 ## we must find Security Solutions
-user = ""
-password = ""
+user = "type user@email.com"
+password = "type appPassword"
 
 imap = imaplib.IMAP4_SSL("imap.gmail.com")
 
@@ -22,7 +22,7 @@ try:
     imap.login(user, password)
 except:
     print("Failed to Login")
-    exit();
+    exit()
 
 # Mailbox Settings
 # imap.select("INBOX")
@@ -30,7 +30,7 @@ imap.select("INBOX")
 
 # Load to Sender Settings
 ## set email
-status, messages = imap.uid("search", None, '(FROM "email@email.com")')
+status, messages = imap.uid("search", None, '(FROM "type sender email")')
 messages = messages[0].split()
 
 # Select value of List
@@ -55,3 +55,4 @@ try:
     clipboard.copy(extract_code)
 except:
     print("Clipboard: Can't copy normally")
+    print(extract_code)
